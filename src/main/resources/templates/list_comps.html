@@ -1,0 +1,39 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>G9PGBI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="newstyle.css">
+    </head>
+    <body>
+    <div>
+        <h1>Futóversenykezel? Alkalmazás</h1>
+        <hr />
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Competition Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="comp : ${competition}">
+                    <td th:text="${comp.name}"></td>
+                    <td th:text="${comp.length}"></td>
+                    <td> 
+                        <form action="#" th:action="@{/selectComp}" method="post">
+                        <input type="hidden" th:value="${comp.name}" name="name" />
+                        <input type="hidden" th:value="${comp.length}" name="length" />
+                        <input type="hidden" th:value="${comp.id}" name="id" />
+                        <button type="submit">Kiválaszt</button>
+                    </form>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </body>
+</html>

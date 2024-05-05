@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selected Competition</title>
+</head>
+<body>
+    <h1>Selected Competition</h1>
+    <h2>Competition Information</h2>
+    <p>Selected Competition: {{name}}</p>
+    <p>Competition Length: {{length}}</p>
+    
+    <h2>Runners and Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Runner Name</th>
+                <th>Result Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#runners}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{resultTime}}</td>
+            </tr>
+            {{/runners}}
+        </tbody>
+    </table>
+    
+    <h2>Statistics</h2>
+    <p>Average Time: {{averageTime}}</p>
+    <p>Minimum Time: {{minTime}}</p>
+    <p>Maximum Time: {{maxTime}}</p>
+</body>
+</html>

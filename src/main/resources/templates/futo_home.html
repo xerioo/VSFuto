@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>G9PGBI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="templates/newstyle.css">
+    </head>
+    <body>
+        <div>
+            <h1>Futóversenykezelõ Alkalmazás</h1>
+        <hr />
+        </div>
+        <!--<div class="row">-->
+            <div id="indexLeftColumn" style="background-color:#ddd;">
+                <h2> Adatbevitel </h2>
+                <form method="get" action="addComp">
+                    <input type="submit" value="Ãšj verseny">
+                </form>
+                <br>
+                <form method="get" action="addRunner">
+                    <input type="submit" value="Ãšj futÃ³">
+                </form>
+                <br>
+                <form method="get" action="addResults">
+                    <input type="submit" value="Ãšj eredmÃ©nyek">
+                </form>
+            </div>
+            <div id="indexRightColumn" style="background-color:#ddd;">
+                <h2>KeresÃ©s</h2>
+                <form method="get" action="listComps">
+                    <input type="submit" value="Verseny keresÃ©se">
+                </form>
+                <br>
+                <form method="get" action="listRunners">
+                    <input type="submit" value="FutÃ³ keresÃ©se">
+                </form>
+            </div>
+        <footer>
+            <p>Az Adatbevitel alatt tudunk új versenyt, futót vagy versenyeredményeket rögzíeni.</p>
+            <p>A Keresés egy futó vagy egy verseny adatainak megjelenítésére szolgál.</p>
+        </footer>
+    </body>
+</html>
